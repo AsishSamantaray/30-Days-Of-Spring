@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- First way to set value to property -->
+	<bean name="university"
+		class="com.asish.springcore.setterinjection.University" p:id="101">
+
+		<!-- Second way to set value to property -->
+		<property name="name" value="SOA University" />
+
+		<!-- Third way to set value to property -->
+		<property name="location">
+			<value>Bhubaneswar</value>
+		</property>
+
+	</bean>
+
+</beans>
