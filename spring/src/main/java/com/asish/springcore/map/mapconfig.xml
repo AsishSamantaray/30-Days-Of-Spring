@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- One way to set value to property by using "P Schema" -->
+	<bean name="customer" class="com.asish.springcore.map.Customer"
+		p:name="Asish Samantaray">
+
+		<!-- Second way to set value to property by using <property/> tag -->
+		<property name="cid" value="101" />
+
+		<!-- Set value to Map Object -->
+		<property name="products">
+			<map>
+
+				<!-- One Way to set value to Map Object -->
+				<entry key="1" value="Suger" />
+
+				<!-- Second Way to set value to Map Object -->
+				<entry key="2">
+					<value>Rice</value>
+				</entry>
+
+				<!-- Third Way to set value to Map Object (Worst) -->
+				<entry>
+					<key>
+						<value>3</value>
+					</key>
+					<value>Vegetable</value>
+				</entry>
+
+			</map>
+		</property>
+
+	</bean>
+
+</beans>
