@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- One way to set value to property by using "P Schema" -->
+	<bean name="hospital"
+		class="com.asish.springcore.list.Hospital" p:name="AIMS">
+
+		<!-- Way to set value to List Object -->
+		<property name="departments">
+			<list>
+				<value>Emergency department</value>
+				<value>Cardiology department</value>
+				<value>Neurology department</value>
+				<value>Oncology department</value>
+			</list>
+		</property>
+
+	</bean>
+
+</beans>
