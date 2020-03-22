@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- Enable the annotation -->
+	<context:annotation-config/>
+	
+	<!-- One way to set value to property by using "P Schema" -->
+	<bean name="employee"
+		class="com.asish.springadvanced.autowiringannotation.Employee"
+		p:name="Asish Samantaray" p:eid="101">
+
+	</bean>
+
+	<!-- Bean of Reference type -->
+	<bean name="address1" class="com.asish.springadvanced.autowiringannotation.Address"
+		p:street="Old Town">
+		<property name="hno" value="207" />
+		<property name="city">
+			<value>Bhubaneswar</value>
+		</property>
+	</bean>
+	
+	<bean name="address2" class="com.asish.springadvanced.autowiringannotation.Address"
+		p:street="New Town">
+		<property name="hno" value="292" />
+		<property name="city">
+			<value>Kolkota</value>
+		</property>
+	</bean>
+
+
+</beans>
