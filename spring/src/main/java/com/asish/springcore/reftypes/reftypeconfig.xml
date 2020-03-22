@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Bean of Reference type -->
+	<bean name="scores" class="com.asish.springcore.reftypes.Scores"
+		p:maths="98" p:physics="90" p:chemistry="92" />
+
+	<!-- One way to set value to property by using "P Schema" -->
+	<bean name="student" class="com.asish.springcore.reftypes.Student"
+		p:name="Asish Samantaray">
+
+		<!-- Injecting Reference Types -->
+		<property name="scores" ref="scores" />
+
+	</bean>
+
+	<!-- Second way to set value to Reference type by using "P:name-ref Schema" -->
+	<!-- <bean name="student" class="com.asish.springcore.reftypes.Student" 
+		p:name="Asish Samantaray" p:scores-ref="scores" /> -->
+
+
+
+</beans>
